@@ -1,0 +1,242 @@
+{
+	"info": {
+		"_postman_id": "d0af8c28-ad5d-45d3-851f-49e80816e3fb",
+		"name": "Acquire",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "message",
+			"item": [
+				{
+					"name": "send message",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"chatRoomRef\": \"CR1\",\n    \"message\": \"Hello Jatinder\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/message",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"message"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get message",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/message",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"message"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ChatRoom",
+			"item": [
+				{
+					"name": "list of chat room",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/chat-room",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"chat-room"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "chat room by person",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/chat-room?person=id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"chat-room"
+							],
+							"query": [
+								{
+									"key": "person",
+									"value": "id"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "chat room by chat room id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/chat-room/CR1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"chat-room",
+								"CR1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create chat room by person",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Fancy Meeting\",\n    \"personRef\": \"P2\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/chat-room",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"chat-room"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "person",
+			"item": [
+				{
+					"name": "create person",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Jatinder\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/person",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"person"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all person",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/person",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"person"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
